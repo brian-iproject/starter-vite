@@ -1,0 +1,31 @@
+.breadcrumb {
+  $block-name: &; // #{$block-name}__element
+
+  font-size: var(--font-size--md);
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: .5em;
+
+    color: var(--text-color-muted);
+
+    background-color: var(--color-black);
+  }
+
+  &__link {
+    --link-color: var(--text-color);
+    --link-color--hover: var(--text-color);
+    display: inline-flex;
+    gap: .5em;
+    align-items: center;
+
+    text-decoration: none;
+  }
+}

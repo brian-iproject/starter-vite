@@ -1,0 +1,128 @@
+:root {
+  /* Базовые Цвета */
+  --color-primary--lighter:   rgb(239, 255, 239); // #EFFFEF
+  --color-primary--light:     rgb(87, 169, 85);   // #57A955
+  --color-primary:            rgb(9, 125, 14);    // #097D0E
+  --color-primary--dark:      rgb(10, 85, 13);    // #0A550D
+
+  --color-white:              rgb(255, 255, 255); // #ffffff
+  --color-gray--light:        rgb(224, 224, 224); // #E0E0E0
+  --color-gray:               rgb(192, 192, 192); // #C0C0C0
+  --color-gray--dark:         rgb(89, 89, 89);    // #595959
+  --color-gray--darker:       rgb(19, 30, 38);    // #131E26
+  --color-black:              rgb(0, 0, 0);       // #000000
+
+  --color-cyan:               rgb(120, 223, 240); // #78DFF0
+
+  --color-gray-blue--lighter: rgb(248, 250, 253); // #F8FAFD
+  --color-gray-blue--light:   rgb(236, 240, 243); // #ECF0F3
+  --color-gray-blue:          rgb(211, 220, 233); // #D3DCE9
+  --color-gray-blue--dark:    rgb(160, 173, 191); // #A0ADBF
+
+  --color-red--lighter:       rgb(255, 239, 239); // #FFEFEF
+  --color-red--light:         rgb(247, 159, 161); // #F79FA1
+  --color-red:                rgb(209, 66, 69); // #D14245
+
+  --color-yellow:             rgb(255, 204, 0); // #FFCC00
+  --color-yellow--dark:       rgb(225, 180, 0); // #E1B400
+
+  /* Семантические цвета */
+  --heading-color:          var(--color-gray--darker);
+  --text-color:             var(--color-gray--dark);
+  --text-color-muted:       var(--color-gray);
+
+  --link-color:             var(--color-primary);
+  --link-color--hover:      var(--color-primary--light);
+  --link-color--active:     var(--color-primary--dark);
+  --focus-color:            var(--color-cyan);
+
+  /* Базовая типографика */
+  --font-family-primary:    'Roboto', Arial, sans-serif;
+
+  --font-size-h1:           24px;
+  --font-size-h2:           18px;
+  --font-size-h3:           16px;
+  --font-size-h4:           16px;
+
+  --font-size--xs:          12px;
+  --font-size--sm:          12px;
+  --font-size--md:          12px;
+  --font-size:              14px;
+  --font-size--lg:          16px;
+
+  --line-height:            1.5;
+  --line-height--heading:   1.4;
+
+  /* Сетка */
+  --grid-gutter:            20px;
+
+  /* Отступы */
+  --offset--xxxs:         4px;
+  --offset--xxs:          4px;
+  --offset--xs:           4px;
+  --offset--sm:           8px;
+  --offset--md:           12px;
+  --offset:               16px;
+  --offset--lg:           20px;
+  --offset--xl:           24px;
+  --offset--xxl:          30px;
+
+  /* Разное */
+  --transition-time:        .3s;
+  --animate-duration:       var(--transition-time);
+  --shadow:                 0 15px 15px rgba(14, 16, 20, .15);
+  --shadow--lg:             0 15px 40px rgba(14, 16, 20, .15);
+
+  --border-radius--sm:      6px;
+  --border-radius:          12px;
+
+  --checkbox-size:          32px;
+
+  @media (min-width: $screen-md) {
+    /* Базовая типографика */
+    --font-size-h1:         32px;
+    --font-size-h2:         24px;
+    --font-size-h3:         18px;
+    --font-size-h4:         18px;
+
+    --font-size--xs:        10px;
+    --font-size--sm:        12px;
+    --font-size--md:        12px;
+    --font-size:            14px;
+    --font-size--lg:        16px;
+
+    --offset--xxxs:         4px;
+    --offset--xxs:          4px;
+    --offset--xs:           8px;
+    --offset--sm:           12px;
+    --offset--md:           16px;
+    --offset:               20px;
+    --offset--lg:           24px;
+    --offset--xl:           32px;
+    --offset--xxl:          40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    /* Базовая типографика */
+    --font-size-h1:         42px;
+    --font-size-h2:         32px;
+    --font-size-h3:         24px;
+    --font-size-h4:         18px;
+
+    --font-size--xs:        10px;
+    --font-size--sm:        12px;
+    --font-size--md:        14px;
+    --font-size:            16px;
+    --font-size--lg:        18px;
+
+    --offset--xxxs:         4px;
+    --offset--xxs:          8px;
+    --offset--xs:           12px;
+    --offset--sm:           16px;
+    --offset--md:           20px;
+    --offset:               24px;
+    --offset--lg:           32px;
+    --offset--xl:           40px;
+    --offset--xxl:          60px;
+  }
+}

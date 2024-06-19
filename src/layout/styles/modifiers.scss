@@ -1,0 +1,74 @@
+.-fst-i { font-style: italic !important; }
+.-fst-n { font-style: normal !important; }
+
+.-fw-t { font-weight: 100; }
+.-fw-xl { font-weight: 200; }
+.-fw-l { font-weight: 300; }
+.-fw-n { font-weight: 400; }
+.-fw-md { font-weight: 500; }
+.-fw-sb { font-weight: 600; }
+.-fw-b { font-weight: 700; }
+.-fw-xb { font-weight: 800; }
+.-fw-xxb { font-weight: 900; }
+
+.-ta-l { text-align: left !important; }
+.-ta-c { text-align: center !important; }
+.-ta-r { text-align: right !important; }
+
+.-fs-xxs { font-size: var(--font-size--xxs) }
+.-fs-xs { font-size: var(--font-size--xs) }
+.-fs-sm { font-size: var(--font-size--sm) !important; }
+.-fs-md { font-size: var(--font-size--md) }
+.-fs-normal { font-size: var(--font-size) }
+.-fs-lg { font-size: var(--font-size--lg) }
+.-fs-h1 { font-size: var(--font-size-h1) }
+.-fs-h2 { font-size: var(--font-size-h2) }
+.-fs-h3 { font-size: var(--font-size-h3) }
+.-fs-h4 { font-size: var(--font-size-h4) }
+
+.-c-primary { color: var(--color-primary); }
+.-c-primary--light { color: var(--color-primary--light); }
+.-c-red { color: var(--color-red); }
+.-c-gray { color: var(--color-gray); }
+.-c-gray--dark { color: var(--color-gray--dark); }
+.-c-gray--darker { color: var(--color-gray--darker); }
+.-c-gray-blue--dark { color: var(--color-gray-blue--dark); }
+.-c-yellow { color: var(--color-yellow); }
+
+.-c-darker { color: var(--heading-color); }
+.-c-text { color: var(--text-color); }
+.-c-muted { color: var(--text-color-muted); }
+
+.-no-margin { margin: 0 !important; }
+.-no-padding { padding: 0; }
+
+.-margin-center { margin: 0 auto }
+
+.-d-none { display: none !important; }
+.-d-block { display: block !important; }
+.-d-flex { display: flex !important; }
+.-d-grid { display: grid !important; }
+
+.-jc-space-between {
+	justify-content: space-between;
+}
+
+
+@media (min-width: $screen-md) {
+	.-d-none-md { display: none !important; }
+	.-d-block-md { display: block !important; }
+	.-d-flex-md { display: flex !important; }
+	.-d-grid-md { display: grid !important; }
+}
+
+@media (min-width: $screen-lg) {
+	.-d-none-lg { display: none !important; }
+	.-d-block-lg { display: block !important; }
+	.-d-flex-lg { display: flex !important; }
+	.-d-grid-lg { display: grid !important; }
+}
+
+.-is-hidden,
+[hidden] {
+	display: none;
+}

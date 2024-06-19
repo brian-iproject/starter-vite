@@ -1,0 +1,40 @@
+mixin page-footer(mods)
+
+  //- Принимает:
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'page-footer--' + mods;
+
+  footer.page-footer(class = allMods)
+    .page-footer__inner.page-container
+      .page-footer__logo
+      //  +logo({ src: '/blocks/logo/images/logo-footer.svg' })
+      //.page-footer__menu
+      //  +menu((userType === false) ? mainMenu : ((userType === 'client') ? mainMenuClient : mainMenuAsessor), {
+      //    baseCss: 'footer-menu',
+      //    submenuWrap: false,
+      //    button: false,
+      //    arrow: false,
+      //    maxLevel: 1
+      //  })
+      //.page-footer__social
+      //  +social(social)
+      //.page-footer__payment
+      //  +social(payment, { mods: ['white'] })
+      //.page-footer__link
+      //  +menu(footerLink, {
+      //    baseCss: 'footer-menu',
+      //    tagNav: false,
+      //    submenuWrap: false,
+      //    button: false,
+      //    arrow: false
+      //  })
+      //.page-footer__copy-c © 2014–2022 AskUsers.ru – рост конверсии вашего сайта

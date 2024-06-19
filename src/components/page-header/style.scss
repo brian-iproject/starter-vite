@@ -1,0 +1,92 @@
+.page-header {
+  $block-name: &; // #{$block-name}__element
+
+  background-color: var(--color-white);
+
+  &--bg {
+    background-color: var(--color-primary--lighter);
+  }
+
+  &__inner {
+    display: flex;
+    gap: var(--grid-gutter);
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &__bottom {
+    //display: none;
+    display: flex;
+  }
+
+  &__logo {
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  &__menu {
+
+    @media (max-width: $screen-xl - 1) {
+      padding: 0 var(--grid-gutter);
+    }
+  }
+
+  &__profile,
+  &__account {
+    display: none;
+  }
+
+  &__auth {
+    --button-color: var(--color-gray);
+
+    & .button {
+      display: flex;
+    }
+  }
+
+  &__burger {
+
+  }
+
+  @media (min-width: $screen-xl) {
+    &__inner {
+      height: auto;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    &--bg &__top {
+      border-bottom: 1px solid var(--color-gray-blue--light);
+    }
+
+    &__bottom {
+      display: flex;
+    }
+
+    &__logo {
+      flex-grow: 0;
+    }
+
+    &__profile,
+    &__account {
+      display: block;
+      justify-self: end;
+      overflow: hidden;
+    }
+
+    &__account {
+      max-width: 230px;
+    }
+
+    &__menu {
+      display: unset;
+    }
+
+    &__burger {
+      display: none;
+    }
+  }
+}

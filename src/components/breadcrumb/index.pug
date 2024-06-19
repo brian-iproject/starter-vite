@@ -1,0 +1,32 @@
+mixin breadcrumb(data, props)
+
+  //- Принимает:
+  //-   data: {             {object} - объект с данными
+  //-     href:             {string} - ссылка
+  //-     title:            {string} - текст
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+      - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+      each mods, index in props.mods
+          - allMods += index ? ' ': '';
+          - allMods += 'breadcrumb--' + mods;
+
+  .breadcrumb(class = allMods)&attributes(attributes)
+    ul.breadcrumb__list(itemprop="http://schema.org/breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList")
+      each item, i in data
+        li.breadcrumb__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          if (item.href)
+            a.breadcrumb__link(href=item.href title=item.title itemprop="item")
+              span(itemprop="name") !{item.title}
+              span →
+            meta(itemprop="position" content=i + 1)
+          else
+            span(title=item.title itemprop="item")
+              span(itemprop="name") !{item.title}
+            meta(itemprop="position" content=i + 1)
+

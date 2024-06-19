@@ -1,0 +1,41 @@
+include mixins
+
+block variables
+
+doctype html
+html(class="page" lang="en")
+  head
+    block head
+      block meta
+        title Вёрстка
+
+      meta(name="robots" content="noindex, follow")
+
+      meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
+
+      link(href="/src/layout/main.scss" rel="stylesheet")
+  body
+    block page
+      .page__inner
+        block header
+          +page-header()(class='page__header')
+
+
+        block breadcrumb
+          .page__breadcrumb.page-container
+            +breadcrumb(['Главная'])
+        block main
+          main.page__content.page-content
+            block beforeContent
+
+            block content
+              p содержимое
+
+            block afterContent
+
+        block footer
+          +page-footer('page__footer')
+
+  script(src="/src/js/main.js", type="module")

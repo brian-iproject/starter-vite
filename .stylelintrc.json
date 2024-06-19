@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-config-rational-order-fix/plugin"
+  ],
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-rational-order-fix"
+  ],
+  "rules": {
+    "plugin/rational-order": [
+      true,
+      {
+        "empty-line-between-groups": true
+      }
+    ],
+    "scss/load-no-partial-leading-underscore": false,
+    "block-no-empty": false
+  },
+  "ignoreFiles": [
+    "dist/**/*"
+  ]
+}

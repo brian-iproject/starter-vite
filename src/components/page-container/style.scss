@@ -1,0 +1,10 @@
+.page-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1210px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--grid-gutter);
+  padding-left: var(--grid-gutter);
+}

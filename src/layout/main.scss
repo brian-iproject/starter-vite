@@ -1,0 +1,18 @@
+@import "normalize.css";
+
+/* Переменные */
+@import 'styles/_variables';
+@import 'styles/_css-variables';
+
+/* Миксины */
+@import 'styles/_mixins';
+@import 'styles/mixins/*';
+
+/* Глобальные стили */
+@import 'styles/global';
+
+/* Модификаторы */
+@import 'styles/modifiers';
+
+/* Компоненты */
+@import "../components/**/*";

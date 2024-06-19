@@ -1,0 +1,10 @@
+{
+    "plugins": {
+        "postcss-nesting": {},
+        "autoprefixer": {},
+        "postcss-combine-media-query": {},
+         "cssnano": {
+             "preset": "default"
+         }
+    }
+}

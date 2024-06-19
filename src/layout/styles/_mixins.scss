@@ -1,0 +1,45 @@
+@import "mixins/spritemap";
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin focus-outline {
+  &:focus {
+    outline: 2px solid var(--focus-color);
+  }
+}
+
+@mixin offset($type: null) {
+  @if $type {
+    $type: '--' + $type;
+  }
+
+  &:not(:first-child):not(.-no-margin) {
+    margin-top: var(--offset + $type);
+  }
+
+  &:not(:last-child):not(.-no-margin) {
+    margin-bottom: var(--offset + $type);
+  }
+}
+
+@mixin link-inversion($static: false) {
+  color: var(--text-color);
+  text-decoration-color: transparent;
+
+  @if ($static == true) {
+    &:hover {
+      color: var(--text-color);
+      text-decoration-color: transparent;
+    }
+  } @else {
+    &:hover {
+      color: var(--link-color--hover);
+      text-decoration-color: currentColor;
+    }
+  }
+}

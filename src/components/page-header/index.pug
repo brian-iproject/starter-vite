@@ -1,0 +1,26 @@
+mixin page-header(props)
+
+  //- Принимает:
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'page-header--' + mods;
+
+  header.page-header(class = allMods)&attributes(attributes)
+    .page-container.page-header__inner.page-header__top
+      .page-header__logo
+      //  +logo({ src: '/blocks/logo/images/logo.svg' })
+      //.page-header__menu.page__nav
+      //  +menu((userType === false) ? mainMenu : ((userType === 'client') ? mainMenuClient : mainMenuAsessor), {
+      //    baseCss: 'main-menu',
+      //    submenuWrap: true,
+      //    button: true,
+      //    arrow: true
+      //  })
