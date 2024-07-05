@@ -1,0 +1,74 @@
+{
+  "footerMenu": {
+    "level": "1",
+    "items": [
+      {
+        "title": "Сотрудники",
+        "dropdownBtn": true,
+        "submenu": {
+          "level": "2",
+          "submenuWrap": true,
+          "items": [
+            { "title": "Профиль" },
+            { "title": "Сотрудник месяца" },
+            { "title": "Статусы сотрудников" },
+            { "title": "Бонусный счет" },
+            { "title": "Обучение" },
+            { "title": "ДМС" },
+            { "title": "Барахолка" },
+            { "title": "Спорт/Фитнес" }
+          ]
+        }
+      },
+      {
+        "title": "Сотрудники",
+        "dropdownBtn": true,
+        "submenu": {
+          "level": "2",
+          "submenuWrap": true,
+          "items": [
+            { "title": "Моя обратная связь" },
+            { "title": "Биржа задач" },
+            { "title": "Опрос 360" },
+            { "title": "Отправить курьера" },
+            { "title": "Библиотека" },
+            { "title": "Миссия" },
+            { "title": "Ценности" },
+            { "title": "Бихаг" }
+          ]
+        }
+      },
+      {
+        "title": "Регламенты и инструкции",
+        "dropdownBtn": true,
+        "submenu": {
+          "level": "2",
+          "submenuWrap": true,
+          "items": [
+            { "title": "TEAM – Общие" },
+            { "title": "SUP – Поддержка сайтов" },
+            { "title": "FIN – Бухгалтерия и офис" },
+            { "title": "Процессы" }
+          ]
+        }
+      },
+      {
+        "title": "Ссылки",
+        "dropdownBtn": true,
+        "submenu": {
+          "level": "2",
+          "submenuWrap": true,
+          "items": [
+            { "title": "pixelplus.ru" },
+            { "title": "tools.pixelplus.ru" },
+            { "title": "plan.pixelplus.ru" },
+            { "title": "info.pixelplus.ru" },
+            { "title": "askusers.ru" },
+            { "title": "Youtube" },
+            { "title": "Telegram" }
+          ]
+        }
+      }
+    ]
+  }
+}

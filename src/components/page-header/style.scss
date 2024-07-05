@@ -3,23 +3,14 @@
 
   background-color: var(--color-white);
 
-  &--bg {
-    background-color: var(--color-primary--lighter);
-  }
 
   &__inner {
     display: flex;
     gap: var(--grid-gutter);
     align-items: center;
     justify-content: space-between;
-    height: 80px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  &__bottom {
-    //display: none;
-    display: flex;
+    padding-top: var(--offset--md);
+    padding-bottom: var(--offset--md);
   }
 
   &__logo {
@@ -32,23 +23,6 @@
     @media (max-width: $screen-xl - 1) {
       padding: 0 var(--grid-gutter);
     }
-  }
-
-  &__profile,
-  &__account {
-    display: none;
-  }
-
-  &__auth {
-    --button-color: var(--color-gray);
-
-    & .button {
-      display: flex;
-    }
-  }
-
-  &__burger {
-
   }
 
   @media (min-width: $screen-xl) {

@@ -1,0 +1,32 @@
+mixin infographics(data, props)
+
+  //- Принимает:
+  //-   data: ''            {array}  - данные
+  //-   props {
+  //-     modsIcon: ''      {array}  - модификаторы иконок
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'infographics--' + mods;
+
+  .infographics(class = allMods)&attributes(attributes)
+
+    - let modsIcon = '';
+    if typeof (props.modsIcon) !== 'undefined' && props.modsIcon
+      each mods, index in props.modsIcon
+        - modsIcon += index ? ' ' : '';
+        - modsIcon += 'infographics__icon--' + mods;
+
+    if typeof (data.icon) !== 'undefined' && data.icon
+      .infographics__icon(class = modsIcon) !{data.icon}
+    if typeof (data.title) !== 'undefined' && data.title
+      .infographics__title !{data.title}
+    if typeof (data.description) !== 'undefined' && data.description
+      .infographics__description !{data.description}
+        block

@@ -12,7 +12,7 @@ h1, .h1 {
   margin: 0 0 var(--offset--lg) 0;
 
   color: var(--heading-color);
-  font-weight: 700;
+  font-weight: 500;
   font-size: var(--font-size-h1);
   line-height: var(--line-height--heading);
 
@@ -28,7 +28,7 @@ h2, .h2 {
   padding: 0;
 
   color: var(--heading-color);
-  font-weight: 700;
+  font-weight: 500;
   font-size: var(--font-size-h2);
   line-height: var(--line-height--heading);
 
@@ -42,22 +42,8 @@ h3, .h3 {
   padding: 0;
 
   color: var(--heading-color);
-  font-weight: 700;
+  font-weight: 500;
   font-size: var(--font-size-h3);
-  line-height: var(--line-height--heading);
-
-  &:not(:first-child) {
-    margin-top: var(--offset);
-  }
-}
-
-h4, .h4 {
-  margin: 0 0 var(--offset--xxs) 0;
-  padding: 0;
-
-  color: var(--heading-color);
-  font-weight: 700;
-  font-size: var(--font-size-h4);
   line-height: var(--line-height--heading);
 
   &:not(:first-child) {

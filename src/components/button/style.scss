@@ -1,0 +1,228 @@
+@use "sass:selector";
+
+@mixin button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin: 0;
+  padding: 0 var(--offset);
+
+  color: var(--button-color, var(--color-white));
+  font: var(--font-size) var(--font-family-primary);
+  font-weight: 700;
+  line-height: var(--line-height);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: var(--button-bg, var(--color-primary));
+  border: 2px solid var(--button-border, var(--color-primary));
+  border-radius: 23px;
+  cursor: pointer;
+
+  transition: var(--transition-time);
+
+  appearance: none;
+
+  --link-color: currentColor;
+  --link-color--hover: currentColor;
+}
+
+@mixin button--primary-dark {
+  --button-bg: var(--color-primary--dark);
+  --button-border: var(--color-primary--dark);
+  --button-color: var(--color-white);
+}
+
+@mixin button--primary {
+  --button-bg: var(--color-primary);
+  --button-border: var(--color-primary);
+  --button-color: var(--color-white);
+}
+
+@mixin button--primary-light {
+  --button-bg: var(--color-primary--light);
+  --button-border: var(--color-primary--light);
+  --button-color: var(--color-white);
+}
+
+@mixin button--green-dark {
+  --button-bg: var(--color-green--dark);
+  --button-border: var(--color-green--dark);
+  --button-color: var(--color-white);
+}
+
+@mixin button--green {
+  --button-bg: var(--color-green);
+  --button-border: var(--color-green);
+  --button-color: var(--color-white);
+}
+
+@mixin button--green-light {
+  --button-bg: var(--color-green--light);
+  --button-border: var(--color-green--light);
+  --button-color: var(--color-white);
+}
+
+
+
+@mixin button--contour {
+  --button-bg: transparent;
+  --button-border: var(--color-primary);
+  --button-color: var(--text-color);
+}
+
+@mixin button--contour-light {
+  --button-bg: transparent;
+  --button-border: var(--color-primary--light);
+  --button-color: var(--color-primary--light);
+}
+
+@mixin button--contour-dark {
+  --button-bg: transparent;
+  --button-border: var(--color-primary--dark);
+  --button-color: var(--color-primary--dark);
+}
+
+
+
+
+
+@mixin button--gray-contour {
+  --button-bg: transparent;
+  --button-border: var(--color-gray--light);
+  --button-color: var(--text-color);
+}
+
+@mixin button--gray-contour-light {
+  --button-bg: transparent;
+  --button-border: var(--color-primary--light);
+  --button-color: var(--color-primary--light);
+}
+
+@mixin button--gray-contour-dark {
+  --button-bg: transparent;
+  --button-border: var(--color-primary--dark);
+  --button-color: var(--color-primary--dark);
+}
+
+
+
+
+
+
+@mixin button--xs {
+  @media (max-width: $screen-sm) or (min-width: $screen-sm) {
+    min-height: 20px;
+    padding: 0 var(--offset--sm);
+
+    font-weight: normal;
+    font-size: var(--font-size--sm);
+    text-transform: none;
+
+    border-radius: 10px;
+  }
+}
+
+@mixin button--large {
+  min-height: 68px;
+
+  border-radius: 34px;
+}
+
+.button {
+  $block-name: &; // #{$block-name}__element
+
+  @include button;
+  @include focus-outline;
+
+  @media (min-width: $screen-md) {
+    padding: 0 46px;
+
+    font-size: var(--font-size--md);
+  }
+
+  & svg {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  &:has(svg) {
+    gap: var(--offset--xs);
+  }
+
+  &:has(svg:only-child) {
+    min-height: auto;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  @media (max-width: $screen-md - 1) {
+    &--wide-mobile {
+      width: 100%;
+    }
+  }
+
+
+  &--primary {
+    @include button--primary;
+
+    &:hover,
+    &:focus {
+      @include button--primary-light;
+    }
+
+    &:active {
+      @include button--primary-dark
+    }
+  }
+
+  &--contour {
+    @include button--contour;
+
+    &:hover,
+    &:focus  {
+      @include button--contour-light;
+    }
+
+    &:active {
+      @include button--contour-dark;
+    }
+  }
+
+  &--green {
+    @include button--green;
+
+    &:hover,
+    &:focus {
+      @include button--green-light;
+    }
+
+    &:active {
+      @include button--green-dark
+    }
+  }
+
+
+
+
+  &--xs {
+    @include button--xs
+  }
+
+  &--large {
+    @include button--large;
+  }
+}

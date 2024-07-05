@@ -1,0 +1,28 @@
+mixin button(props)
+
+  //- Принимает:
+  //-   props {
+  //-     tag: ''           {string} - тэг, если не button
+  //-     title: ''         {string} - текст в кнопке
+  //-     mods: ''          {array}  - модификаторы блока
+  //-     svg: ''           {string} - svg-иконка
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ' : '';
+      - allMods += 'button--' + mods;
+
+  #{props.tag ? props.tag : 'button'}.button(class = allMods)&attributes(attributes)
+    if typeof (props.svgStart) !== 'undefined' && props.svgStart
+      != props.svgStart
+    if typeof (props.title) !== 'undefined' && props.title
+      if (typeof (props.svg) !== 'undefined' && props.svg) || (typeof (props.svgStart) !== 'undefined' && props.svgStart)
+        span !{props.title}
+      else
+        != props.title
+    if typeof (props.svg) !== 'undefined' && props.svg
+      != props.svg

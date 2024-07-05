@@ -34,6 +34,8 @@ export default function vitePlugins() {
         view: false,
         use: false,
       },
+      injectSVGOnDev: true,
+      prefix: false,
       styles: './src/layout/styles/mixins/spritemap.scss',
     }),
 

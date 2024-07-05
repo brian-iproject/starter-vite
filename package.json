@@ -42,6 +42,7 @@
     "vituum": "^1.1.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^11.1.4"
   }
 }

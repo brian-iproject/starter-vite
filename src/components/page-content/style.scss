@@ -1,0 +1,8 @@
+.page-content {
+
+  $block-name: &; // #{$block-name}__element
+  padding-top: var(--layout-gutter);
+  padding-bottom: var(--layout-gutter);
+
+  background-color: var(--color-pale-blue--light);
+}

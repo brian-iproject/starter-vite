@@ -1,0 +1,19 @@
+mixin logo(props)
+
+  //- Принимает:
+  //-   props {
+  //-     attrs: ''         {array}  - атрибуты img
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'logo--' + mods;
+
+  if typeof (props.attrs.src) !== 'undefined' && props.attrs.src
+    .logo(class = allMods)
+      img&attributes(props.attrs)

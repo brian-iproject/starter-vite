@@ -1,0 +1,188 @@
+{
+  "calendar": [
+    {
+      "date": 28,
+      "holiday": false,
+      "muted": true
+    },
+    {
+      "date": 29,
+      "holiday": false,
+      "muted": true
+    },
+    {
+      "date": 30,
+      "holiday": false,
+      "muted": true
+    },
+    {
+      "date": 31,
+      "holiday": false,
+      "muted": true
+    },
+    {
+      "date": 1,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 2,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 3,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 4,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 5,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 6,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 7,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 8,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 9,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 10,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 11,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 12,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 13,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 14,
+      "holiday": false,
+      "muted": false,
+      "absence": "primary"
+    },
+    {
+      "date": 15,
+      "holiday": false,
+      "muted": false,
+      "absence": "orange"
+    },
+    {
+      "date": 16,
+      "holiday": true,
+      "muted": false,
+      "absence": "blue"
+    },
+    {
+      "date": 17,
+      "holiday": true,
+      "muted": false,
+      "absence": "black"
+    },
+    {
+      "date": 18,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 19,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 20,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 21,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 22,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 23,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 24,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 25,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 26,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 27,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 28,
+      "holiday": false,
+      "muted": false
+    },
+    {
+      "date": 29,
+      "holiday": false,
+      "muted": false,
+      "event": {
+        "iconId": "fluent-balloon",
+        "description": ""
+      },
+      "absence": "black"
+    },
+    {
+      "date": 30,
+      "holiday": true,
+      "muted": false
+    },
+    {
+      "date": 1,
+      "holiday": true,
+      "muted": true
+    }
+  ]
+}

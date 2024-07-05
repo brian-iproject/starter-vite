@@ -1,0 +1,26 @@
+mixin month-absence(data, props)
+
+  //- Принимает:
+  //-   data: ''            {array}  - данные
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'month-absence--' + mods;
+
+  .month-absence(class = allMods)&attributes(attributes)
+    .month-absence__title !{data.month} !{data.year}
+    ul.month-absence__list
+      li Раб. дней: #{span data.total} !{data.total} (!{data.total})
+      li Отгулы:
+        span.-c-orange!{data.compensatory}
+      li Из дома:
+        span.-c-blue !{data.home}
+      li Больничные:
+        span.-c-black !{data.sick}

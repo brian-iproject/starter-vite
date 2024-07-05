@@ -1,0 +1,19 @@
+mixin articles-section(data, props)
+
+  //- Принимает:
+  //-   data: ''            {array}  - данные
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'articles-section--' + mods;
+
+  .articles-section(class = allMods)&attributes(attributes)
+    .articles-section__inner
+      block

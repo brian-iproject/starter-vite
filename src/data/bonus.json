@@ -1,0 +1,44 @@
+{
+  "bonus": [
+    {
+      "image": "/assets/images/education.png",
+      "title": "Обучение",
+      "description": "Берем на себя все\nвопросы по работе сайта"
+    },
+    {
+      "image": "/assets/images/task-exchange.png",
+      "title": "Биржа задач",
+      "description": "Берем на себя все\nвопросы по работе сайта"
+    },
+    {
+      "image": "/assets/images/dms.png",
+      "title": "ДМС",
+      "description": "А еще тут доска объявлений"
+    },
+    {
+      "image": "/assets/images/board.png",
+      "title": "Бонусная\n программа",
+      "description": "Берем на себя все\nвопросы по работе сайта"
+    },
+    {
+      "image": "/assets/images/bonus-program.png",
+      "title": "Бонусная\n программа",
+      "description": "Берем на себя все\nвопросы по работе сайта"
+    },
+    {
+      "image": "/assets/images/delivery.png",
+      "title": "Отправить\nкурьера",
+      "description": "Берем на себя все\nвопросы по работе сайта"
+    },
+    {
+      "image": "/assets/images/sport.png",
+      "title": "Спорт/Фитнес",
+      "description": "Берем на себя все\nвопросы по работе сайта"
+    },
+    {
+      "image": "/assets/images/library.png",
+      "title": "Библиотека",
+      "description": "Берем на себя все\nвопросы по работе сайта"
+    }
+  ]
+}

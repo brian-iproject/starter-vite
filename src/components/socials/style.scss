@@ -1,0 +1,30 @@
+.socials {
+
+  $block-name: &; // #{$block-name}__element
+  display: flex;
+  gap: var(--offset--xs);
+
+  @include list-reset();
+
+
+  & li {
+
+    & a {
+      display: block;
+
+      color: var(--color-white);
+
+      transition: var(--transition-time);
+
+      &:hover {
+        color: var(--color-primary);
+
+        transform: scale(1.2);
+      }
+
+      & svg {
+        display: block;
+      }
+    }
+  }
+}

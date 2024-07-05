@@ -1,0 +1,41 @@
+mixin calendar(data, props)
+
+  //- Принимает:
+  //-   data: ''            {array}  - данные
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'calendar--' + mods;
+
+  .calendar(class = allMods)&attributes(attributes)
+    .calendar__head
+      .calendar__col Пн
+      .calendar__col Вт
+      .calendar__col Ср
+      .calendar__col Чт
+      .calendar__col Пт
+      .calendar__col Сб
+      .calendar__col Вс
+    .calendar__body
+      each item in data
+        - let colMods = '';
+        if typeof (item.holiday) !== 'undefined' && item.holiday
+          - colMods += ' calendar__col--holiday'
+        if typeof (item.muted) !== 'undefined' && item.muted
+          - colMods += ' calendar__col--muted'
+        .calendar__col(class = colMods)
+          if typeof (item.event) !== 'undefined' && item.event
+            .calendar__event
+              if typeof (item.event.iconId) !== 'undefined' && item.event.iconId
+                +icon(item.event.iconId)
+
+          span.calendar__date !{item.date}
+          if typeof (item.absence) !== 'undefined' && item.absence
+            .calendar__absence(class = 'calendar__absence--' + item.absence)

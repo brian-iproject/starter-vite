@@ -1,4 +1,4 @@
-class SvgLoad {
+export default class SvgLoad {
     constructor(svgPath) {
         this.ajax = new XMLHttpRequest();
         this.getSvgContent(svgPath);
@@ -30,5 +30,3 @@ class SvgLoad {
         }
     }
 }
-
-export default SvgLoad;

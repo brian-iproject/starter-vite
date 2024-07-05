@@ -1,0 +1,34 @@
+{
+  "socials": [
+    {
+      "title": "zen",
+      "href": "#",
+      "icon": "<svg width=\"20\" height=\"20\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#zen\"></use></svg>"
+    },
+    {
+      "title": "facebook",
+      "href": "#",
+      "icon": "<svg width=\"20\" height=\"20\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#facebook\"></use></svg>"
+    },
+    {
+      "title": "instagram",
+      "href": "#",
+      "icon": "<svg width=\"20\" height=\"20\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#instagram\"></use></svg>"
+    },
+    {
+      "title": "vkontakte",
+      "href": "#",
+      "icon": "<svg width=\"22\" height=\"22\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#vk\"></use></svg>"
+    },
+    {
+      "title": "youtube",
+      "href": "#",
+      "icon": "<svg width=\"20\" height=\"20\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#youtube\"></use></svg>"
+    },
+    {
+      "title": "twitter",
+      "href": "#",
+      "icon": "<svg width=\"20\" height=\"20\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#twitter\"></use></svg>"
+    }
+  ]
+}

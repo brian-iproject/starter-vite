@@ -1,0 +1,15 @@
+.month-absence {
+
+  $block-name: &; // #{$block-name}__element
+
+
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__list {
+    font-size: var(--font-size--sm);
+    @include list-reset();
+  }
+}

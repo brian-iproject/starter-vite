@@ -2,9 +2,9 @@
   position: relative;
 
   width: 100%;
-  max-width: 1210px;
+  max-width: $screen-xxl;
   margin-right: auto;
   margin-left: auto;
-  padding-right: var(--grid-gutter);
-  padding-left: var(--grid-gutter);
+  padding-right: var(--layout-gutter);
+  padding-left: var(--layout-gutter);
 }

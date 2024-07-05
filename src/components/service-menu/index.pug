@@ -1,0 +1,24 @@
+mixin service-menu(data, props)
+
+  //- Принимает:
+  //-   data: ''            {array}  - данные
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'service-menu--' + mods;
+
+  .service-menu(class = allMods)&attributes(attributes)
+    ul.service-menu__list
+      each item in data
+        li
+          a(href=item.href).service-menu__link
+            .service-menu__icon !{item.icon}
+            .service-menu__title !{item.title}
+    block

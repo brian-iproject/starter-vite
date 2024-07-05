@@ -1,0 +1,50 @@
+.bonus-tile {
+
+  $block-name: &; // #{$block-name}__element
+
+  width: 197px;
+
+  &__inner {
+    --link-color: var(--text-color);
+
+    position: relative;
+
+    display: block;
+
+    text-decoration: none;
+  }
+
+  &__image {
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    right: var(--offset--xxs);
+    bottom: var(--offset--xxs);
+    left: var(--offset--xxs);
+
+    padding: var(--offset--sm) var(--offset--xs);
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: var(--border-radius--sm);
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: var(--font-size--md);
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin-top: var(--offset--xxxs);
+  }
+}

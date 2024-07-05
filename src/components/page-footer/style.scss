@@ -10,103 +10,69 @@
   background-color: var(--color-gray--darker);
 
   & a {
+    color: var(--color-gray--dark);
     text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary--light);
+    }
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--layout-gutter);
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
+  &__logo {
+
+    & svg {
+      display: block;
+
+      fill: var(--color-white);
+    }
+  }
+
   &__copy-c {
-    color: var(--color-gray);
+    margin-top: var(--offset);
+
+    text-transform: uppercase;
   }
 
-  @media (min-width: $screen-md) {
-    font-size: var(--font-size--sm);
-
-    &__inner {
-      display: grid;
-      grid-template-columns: repeat(24, 1fr);
-      gap: calc(var(--grid-gutter) / 2);
-      align-items: center;
-      padding-top: 46px;
-      padding-bottom: 30px;
-    }
-
-    &__logo {
-      grid-column: span 6;
-      order: 1;
-    }
-
-    &__menu {
-      grid-column: span 13;
-      justify-self: center;
-      order: 1;
-    }
-
-    &__social {
-      grid-column: span 5;
-      justify-self: right;
-      order: 1;
-    }
-
-    &__copy-c {
-      grid-column: span 6;
-      order: 2;
-    }
-
-    &__link {
-      grid-column: span 12;
-      justify-self: center;
-      order: 3;
-    }
-
-    &__payment {
-      grid-column: span 6;
-      justify-self: right;
-      order: 4;
-    }
+  &__socials {
+    margin-top: var(--offset--xl);
   }
+
+  &__link {
+    margin-top: var(--offset--xs);
+  }
+
+  & p {
+    margin: 0;
+  }
+
 
   @media (min-width: $screen-lg) {
-    padding-top: 54px;
-    padding-bottom: 56px;
-
     font-size: var(--font-size--md);
 
     &__inner {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
-      gap: var(--grid-gutter)
+      gap: var(--layout-gutter);
+      align-items: flex-start;
+      padding-top: 64px;
+      padding-bottom: 64px;
     }
 
-    &__logo {
-      grid-column: span 3;
+    &__info {
+      grid-column: 1 / 4;
     }
 
     &__menu {
-      grid-column: span 6;
-      justify-self: right;
-    }
-
-    &__social {
-      grid-column: span 3;
-    }
-
-    &__copy-c {
-      grid-column: span 4;
-    }
-
-    &__link {
-      grid-column: span 5;
-      justify-self: right;
-    }
-
-    &__payment {
-      grid-column: span 3;
+      grid-column: 4 / 13;
+      order: 2;
     }
   }
 }

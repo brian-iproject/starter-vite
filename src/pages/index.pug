@@ -7,6 +7,101 @@ block meta
 block content
     section.page-section.page-section--line
         .page-container
-            | <svg class="icon"><use href="#play"></use></svg>
+          .grid.grid--sm-12
+            .grid__item.grid__item--sm-12
+              .block-incut.block-incut--white-shadow
+                .grid.grid--sm-12
+                  .grid__item.grid__item--sm-3
+                    .h2 Наши ценности
+                  .grid__item.grid__item--sm-9
+                    .grid.grid--sm-4
+                      each item in ourValues
+                        +infographics(item, {mods: ['type1'], modsIcon: ['wave']} )
 
-            h1 ТЕСТ
+
+            .grid__item.grid__item--sm-4
+              .block-incut.block-incut--white-shadow
+                .h3.-tt-upper Обратная связь
+            .grid__item.grid__item--sm-4
+              .block-incut.block-incut--white-shadow
+                .h3.-tt-upper Сотрудник месяца
+            .grid__item.grid__item--sm-4
+              .block-incut.block-incut--white-shadow
+                .h3.-tt-upper Опрос 360
+
+
+            .grid__item.grid__item--sm-3
+              .block-incut.block-incut--white-shadow
+            .grid__item.grid__item--sm-9
+              .block-incut.block-incut--white-shadow
+                .h2 Календарь
+                .grid.grid--sm-5
+                  .grid__item.grid__item--sm-4
+                    +calendar(calendar)
+                  .grid__item.grid__item--sm-1
+                    .block-incut.block-incut--small-padding
+                      +month-absence({
+                        "month": "Июнь",
+                        "year": "2023",
+                        "total": "22",
+                        "compensatory": 0,
+                        "home": 5,
+                        "sick": 14
+                      })
+                    .block-incut.block-incut--small-padding
+                      +month-absence({
+                        "month": "Июль",
+                        "year": "2023",
+                        "total": "21",
+                        "compensatory": 3,
+                        "home": 2,
+                        "sick": 7
+                      })
+                    .block-incut.block-incut--small-padding.-fs-sm
+                      +month-absence({
+                        "month": "Август",
+                        "year": "2023",
+                        "total": "20",
+                        "compensatory": 10,
+                        "home": 0,
+                        "sick": 0
+                      })
+
+
+            .grid__item.grid__item--sm-12
+              .block-incut
+                .h2 Корпоративные бонусы и компенсации
+                .block-incut__inner-wide
+                  .swiper
+                    .swiper-wrapper
+                      each item in bonus
+                        +bonus-tile(item).swiper-slide
+
+            .grid__item.grid__item--sm-12
+              .block-incut.block-incut--white-shadow
+                .h2 Регламенты и инструкции
+                .grid.grid--sm-4
+                  each section in articlesSection.items
+                    .article-sections
+                      .article-sections__head
+                        span.article-sections__title !{section.title}
+                        | &nbsp;&nbsp;!{section.subtitle}
+                      ul.article-sections__list
+                        each item in section.submenu.items
+                          li: a(href="#") !{item.title}
+
+
+
+            .grid__item.grid__item--sm-6
+              .block-incut.block-incut--white-shadow
+                .h2 Наша миссия
+                .grid
+                  each item in ourMission
+                    +infographics(item, { mods: ['type2'], modsIcon: ['shadow-left'] } )
+
+
+            .grid__item.grid__item--sm-6
+              .block-incut.block-incut--white-shadow
+                .h2 Наш Бихаг!
+                img(src="/assets/images/bihag.jpg" width="590" height="331" alt="")
+

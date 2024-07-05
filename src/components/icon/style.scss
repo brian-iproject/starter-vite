@@ -1,0 +1,49 @@
+.icon {
+  $block-name: &; // #{$block-name}__element
+  //flex-shrink: 0;
+  max-width: 100%;
+  height: auto;
+
+  transition: var(--transition-time);
+  aspect-ratio: 1;
+
+  //@include icon--xs;
+  //
+  //&--md {
+  //  @include icon--sm;
+  //}
+  //
+  //&--lg {
+  //  @include icon--md;
+  //}
+  //
+  //&--xl {
+  //  @include icon--md;
+  //}
+  //
+  //@media (min-width: $screen-md) {
+  //  &--xs {
+  //    @include icon--xs;
+  //  }
+  //
+  //  &--sm {
+  //    @include icon--sm;
+  //  }
+  //
+  //  &--md {
+  //    @include icon--md;
+  //  }
+  //
+  //  &--lg {
+  //    @include icon--lg;
+  //  }
+  //
+  //  &--xl {
+  //    @include icon--xl;
+  //  }
+  //}
+
+  &--primary {
+    fill: var(--color-primary);
+  }
+}

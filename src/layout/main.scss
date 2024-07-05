@@ -4,6 +4,8 @@
 @import 'styles/_variables';
 @import 'styles/_css-variables';
 
+@import 'styles/_fonts';
+
 /* Миксины */
 @import 'styles/_mixins';
 @import 'styles/mixins/*';
@@ -16,3 +18,5 @@
 
 /* Компоненты */
 @import "../components/**/*";
+
+@import "../../node_modules/swiper/swiper.min.css";

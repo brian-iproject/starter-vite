@@ -1,0 +1,15 @@
+.logo {
+
+  $block-name: &; // #{$block-name}__element
+
+  & img {
+    display: block;
+  }
+
+  @media (max-width: $screen-lg - 1) {
+    & img {
+      width: 164px;
+      height: 34px;
+    }
+  }
+}

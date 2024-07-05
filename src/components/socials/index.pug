@@ -1,0 +1,20 @@
+mixin socials(data, props)
+
+  //- Принимает:
+  //-   data: ''            {array}  - данные
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'socials--' + mods;
+
+  ul.socials(class = allMods)&attributes(attributes)
+    each item in data
+      li
+        a(href=item.href) !{item.icon}

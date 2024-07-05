@@ -1,0 +1,26 @@
+mixin bonus-tile(data, props)
+
+  //- Принимает:
+  //-   data: ''            {array}  - данные
+  //-   props {
+  //-     mods: ''          {array}  - модификаторы блока
+
+  if typeof (props) === 'undefined'
+    - props = {};
+
+  - let allMods = '';
+  if typeof (props.mods) !== 'undefined' && props.mods
+    each mods, index in props.mods
+      - allMods += index ? ' ': '';
+      - allMods += 'bonus-tile--' + mods;
+
+  .bonus-tile(class = allMods)&attributes(attributes)
+    a.bonus-tile__inner(href="#")
+      if typeof (data.image) !== 'undefined' && data.image
+        .bonus-tile__image
+          img(src=data.image alt="")
+      .bonus-tile__info
+        if typeof (data.title) !== 'undefined' && data.title
+          .bonus-tile__title !{data.title}
+        if typeof (data.description) !== 'undefined' && data.description
+          .bonus-tile__description !{data.description}

@@ -15,26 +15,17 @@ mixin page-footer(mods)
 
   footer.page-footer(class = allMods)
     .page-footer__inner.page-container
-      .page-footer__logo
-      //  +logo({ src: '/blocks/logo/images/logo-footer.svg' })
-      //.page-footer__menu
-      //  +menu((userType === false) ? mainMenu : ((userType === 'client') ? mainMenuClient : mainMenuAsessor), {
-      //    baseCss: 'footer-menu',
-      //    submenuWrap: false,
-      //    button: false,
-      //    arrow: false,
-      //    maxLevel: 1
-      //  })
-      //.page-footer__social
-      //  +social(social)
-      //.page-footer__payment
-      //  +social(payment, { mods: ['white'] })
-      //.page-footer__link
-      //  +menu(footerLink, {
-      //    baseCss: 'footer-menu',
-      //    tagNav: false,
-      //    submenuWrap: false,
-      //    button: false,
-      //    arrow: false
-      //  })
-      //.page-footer__copy-c © 2014–2022 AskUsers.ru – рост конверсии вашего сайта
+      .page-footer__menu
+        +menu(footerMenu, 'footer-menu')
+
+      .page-footer__info
+        .page-footer__logo
+          +logo({ attrs: { src: '/assets/images/logo-footer.svg' } })
+        .page-footer__copy-c © 2006–2024 — Пиксель Плюс
+        .page-footer__socials
+          +socials(socials)
+        .page-footer__link
+          p: a(href="#") Публичная оферта
+          p: a(href="#") Политика конфиденциальности
+
+
